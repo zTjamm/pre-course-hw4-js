@@ -3,13 +3,11 @@ let timerId; // переменная, которая будет хранить I
 const startButton = document.querySelector("#start");
 startButton.addEventListener('click', function () {
     timerId = setInterval(updateClock, 1); // запускаем  updateClock() каждую секунду
-        console.log(timerId)
 });
 
 const stopButton = document.querySelector('#stop');
 stopButton.addEventListener('click', function () {
     clearInterval(timerId); // останавливаем таймер
-    console.log(timerId)
 });
 
 function updateClock() {
