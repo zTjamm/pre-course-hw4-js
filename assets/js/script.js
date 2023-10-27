@@ -1,21 +1,15 @@
 let timerId; // переменная, которая будет хранить ID таймера
 
-
 const startButton = document.querySelector("#start");
-const stopButton = document.querySelector('#stop');
-
-
 startButton.addEventListener('click', function () {
     timerId = setInterval(updateClock, 1); // запускаем  updateClock() каждую секунду
-        console.log(true)
-        stopButton.removeAttribute('disabled')
-        startButton.setAttribute("disabled", "");
+        console.log(timerId)
 });
+
+const stopButton = document.querySelector('#stop');
 stopButton.addEventListener('click', function () {
-    console.log("stop")
     clearInterval(timerId); // останавливаем таймер
-    startButton.removeAttribute("disabled")
-    stopButton.setAttribute('disabled', '')
+    console.log(timerId)
 });
 
 function updateClock() {
